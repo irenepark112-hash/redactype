@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/display.scss';
+---
+
+<Layout>
+    <h1 id="title">redactype</h1>
+
+    <div id="page-content">
+
+    <div class="category" id="first">
+        <p class="title">Advent</p>
+            <div class="advent-type">
+                <span>VIVID zigzags FLOURISH between THE GRID grid.</span>
+                <span>VIVID zigzags FLOURISH between THE GRID grid.</span>
+		    </div>
+            <div class="controls">
+                <h3>POSI</h3>
+                <input type="range" id="posi-slider" min="0" max="100" value="0" step="1" oninput="setPosi(this.value)">
+                <span id="current-posi"></span>
+
+                <h3>SIZE</h3>
+                <input type="range" id="size-slider" min="10" max="30" value="0" step="1" oninput="setSize(this.value)">
+                <span id="current-size"></span>
+            </div>
+    </div>
+
+    <div class="category" id="second">
+        <p class="title">Gravity</p>
+            <div class="gravity-type">
+                <span>Gravity guides gentle gestures gracefully.</span>
+                <span>Gravity guides gentle gestures gracefully.</span>
+            </div>
+            <div class="controls">
+                <h3>GRAV</h3>
+                <input type="range" id="grav-slider" min="0" max="100" value="0" step="1" oninput="setGrav(this.value)">
+                <span id="current-grav"></span>
+            </div>
+	</div>
+
+    <div class="category" id="third">
+        <p class="title">Holepunch</p>
+            <div class="punch-type">
+                <span>soft silk slips slowly through silent air.</span>
+                <span>soft silk slips slowly through silent air.</span>
+            </div>
+            <div class="controls">
+                <h3>HOLE</h3>
+                <input type="range" id="hole-slider" min="0" max="100" value="0" step="1" oninput="setHole(this.value)">
+                <span id="current-hole"></span>
+            </div>
+    </div>
+    
+
+    </div>
+    
+    <script is:inline>
+        var root = document.querySelector('html');
+        
+        var currentPosi = document.querySelector('#current-posi');
+        function setPosi(newPosi) {
+            currentPosi.innerText = newPosi;
+            root.style.setProperty('--POSI', newPosi);
+        }
+
+        var currentSize = document.querySelector('#current-size');
+        function setSize(newSize) {
+            currentSize.innerText = newSize;
+            root.style.setProperty('--SIZE', newSize + "rem");
+        }
+
+        var currentGrav = document.querySelector('#current-grav');
+        function setGrav(newGrav) {
+            currentGrav.innerText = newGrav;
+            root.style.setProperty('--GRAV', newGrav);
+        }
+
+        var currentHole = document.querySelector('#current-hole');
+        function setHole(newHole) {
+            currentHole.innerText = newHole;
+            root.style.setProperty('--HOLE', newHole);
+        }
+
+        </script>
+    
+</Layout>

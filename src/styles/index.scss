@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    cursor: crosshair;
+  }
+  
+
+#title {
+    font-family: 'Commit';
+    // font-size: min(18vw, 40vh);
+    font-size: 14rem;
+    // text-decoration: underline;
+    // text-decoration-thickness: 0.02em;
+    width: 100%;
+    font-weight: 100;
+    letter-spacing: -0.08em;
+    color: white;
+    margin: 2rem;
+
+    &:hover {
+
+        text-decoration: line-through;
+        text-decoration-thickness: 0.04em;
+    }
+}
+
+@font-face {
+    font-family: "Advent";
+    src: url('/fonts/ADVENT.ttf');
+}
+
+@font-face {
+    font-family: "Gravity";
+    src: url('/fonts/GRAVITY2.ttf');
+}
+
+@font-face {
+    font-family: "Punch";
+    src: url('/fonts/PUNCH.ttf');
+}
+
+@font-face {
+    font-family: "Commit";
+    src: url('/fonts/CommitMono-400-Regular.otf');
+}
+
+#display {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: 60rem;
+
+    font-family: 'Advent';
+    font-variation-settings: "POSI" 0;
+    transition: font-variation-settings 100ms ;
+
+    font-size: 5rem;
+    margin-left: 3rem;
+    color: white;text-align: right;
+    
+
+    font-variation-settings: "POSI" 100;
+        animation: posi-loop 1.2s ease-in-out infinite;
+    // &:hover {
+    //     color: grey;
+    //     font-variation-settings: "POSI" 100;
+    //     animation: posi-loop 1.2s ease-in-out infinite;
+    // }
+}
+
+@keyframes posi-loop {
+    0%   { font-variation-settings: "POSI" 0; }
+    50%  { font-variation-settings: "POSI" 100; }
+    100% { font-variation-settings: "POSI" 0; }
+  }
+
+.text-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-family: 'Commit';
+    font-size: .75rem;
+    font-weight: 100;
+    width: 27rem;
+    margin: 3rem;
+    padding-top: 1rem;
+    color: white;
+        .sum {
+
+            line-height: 1.3;
+            &:hover {
+                text-decoration: line-through;
+            }
+        }
+
+        .credit {
+            &:hover {
+                text-decoration: line-through;
+            }
+        }
+
+        
+}
+
+// .advent-1 {
+//     display: flex;
+//     flex-direction: row;
+//     font-family: 'Advent';
+//     font-size: 5rem;
+//     margin: 2rem;
+//     color: white;
+// }
+
+// .gravity-1 {
+//     display: flex;
+//     flex-direction: row;
+//     font-family: 'Gravity';
+//     font-size: 5rem;
+//     margin: 2rem;
+// }

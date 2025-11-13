@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    // overflow: scroll;
+    // scroll-padding: none;
+}
+
+// keyframe for marquee
+
+html {
+    background-color: rgb(0, 0, 0);
+    cursor: crosshair;
+    overflow: hidden;
+    color: white;
+}
+
+#title {
+    color: black;
+    font-family: 'Commit';
+    text-align: right;
+    font-size: .8rem;
+    font-weight: 100;
+    padding: .5rem;
+    padding-right: 1rem;
+    background-color: rgb(255, 255, 255);
+    // color: white;
+    // height: 24px;
+
+    &:hover {
+        text-decoration: line-through;
+    }
+}
+
+@font-face {
+    font-family: "Advent";
+    src: url('/fonts/ADVENT.ttf');
+}
+
+@font-face {
+    font-family: "Gravity";
+    src: url('/fonts/GRAVITY2.ttf');
+}
+
+@font-face {
+    font-family: "Punch";
+    src: url('/fonts/PUNCH.ttf');
+}
+
+@font-face {
+    font-family: "Commit";
+    src: url('/fonts/CommitMono-400-Regular.otf');
+}
+
+
+body {
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#page-content {
+    width: 100%;
+    overflow-y: scroll !important;
+    overflow-x: hidden;
+    scrollbar-color: rgb(0, 0, 0) rgba(0, 0, 0, 0);
+}
+
+@keyframes all-marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+}
+
+:root {
+    --POSI: 0;
+    --SIZE: 10rem;
+    --HOLE: 50;
+    --font-size: 20rem;
+}
+
+#first {
+    display: flex;
+    flex-direction: column;
+    border-bottom: .1px solid rgba(255, 255, 255, 0.527);
+    font-family: 'Commit';
+    padding: 1.5rem;
+
+    .advent-type {
+
+        // overflow-x: scroll !important;
+        white-space: nowrap;
+        display: flex;
+        font-size: 20rem;
+        transition: transform .3s ease;
+
+        padding: 3rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        span {
+            animation: all-marquee 30s linear infinite;
+
+            font-family: "Advent", sans-serif;
+			font-variation-settings: "POSI" var(--POSI);
+			font-size: var(--SIZE);
+
+
+            &:hover {
+                color: rgb(255, 0, 238);
+            }
+        }
+    
+    }
+
+}
+
+.controls {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 2rem;
+
+    h3 {
+        padding-right: 1px;
+        font-size: .8rem;
+        font-weight: 100;
+    }
+    input[type="range"] {
+        margin-left: 3rem;
+        -webkit-appearance: none;
+        appearance: none;
+        width: 300px;
+        height: 1px;
+        background: rgb(255, 255, 255);
+        cursor: pointer;
+    }
+
+    #current-posi {
+        margin-left: .1rem;
+        font-size: .75rem;
+    }
+
+    #current-size {
+        margin-left: .1rem;
+        font-size: .75rem;
+    }
+
+    #current-grav {
+        margin-left: .1rem;
+        margin-bottom: 3rem;
+    }
+}   
+
+   
+#second {
+    display: flex;
+    flex-direction: column;
+    border-bottom: .1px solid rgba(255, 255, 255, 0.517);
+    font-family: 'Commit';
+    padding: 1.5rem;
+
+
+    .gravity-type {
+        white-space: nowrap;
+        display: flex;
+        font-size: 10rem;
+        transition: transform .3s ease;
+
+        padding: 3rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        span {
+            animation: all-marquee 12s linear infinite;
+            font-family: 'Gravity';
+            font-variation-settings: "GRAV" var(--GRAV);
+			
+        }
+
+        &:hover {
+            color: rgb(0, 8, 255);
+        }
+    }
+}
+
+#third {
+    display: flex;
+    flex-direction: column;
+    border-bottom: .1px solid rgb(255, 255, 255);
+    font-family: 'Commit';
+    padding: 1.5rem;
+
+    .punch-type {
+        white-space: nowrap;
+        display: flex;
+        font-size: 10rem;
+        transition: transform .1s ease;
+
+        padding: 3rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        span {
+            animation: all-marquee 15s linear infinite;
+
+            font-family: "Punch";
+			font-variation-settings: "HOLE" var(--HOLE);
+			
+            &:hover {
+                color: rgb(255, 0, 0);
+            }
+        }
+    }
+}
+
+// title of the type names
+.title {
+    display: flex;
+    font-family: 'Commit';
+    font-size: .8rem;
+    // text-decoration:underline;
+    // background-color:red;
+    padding: 0;
+    margin: 0;
+}
+
+.category {
+    // background-color: green;
+    div {
+        // background-color: blue;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+
