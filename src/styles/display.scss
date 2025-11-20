@@ -104,6 +104,7 @@ body {
         
         &:hover {
             transform: scale(1.05);
+            color: rgb(255, 0, 238);
         }
 
         span {
@@ -113,10 +114,6 @@ body {
 			font-variation-settings: "POSI" var(--POSI);
 			font-size: var(--SIZE);
 
-
-            &:hover {
-                color: rgb(255, 0, 238);
-            }
         }
     
     }
