@@ -32,7 +32,7 @@ html, body {
         
     }
 
-    animation: blink 2s linear infinite
+    animation: blink 2s linear infinite;
     
 }
 
@@ -69,20 +69,19 @@ html, body {
 #display {
     display: flex;
     flex-direction: row;
-    justify-content: left;
+    justify-content: flex-start;
     width: 60rem;
 
     font-family: 'Advent';
     font-variation-settings: "POSI" 0;
-    transition: font-variation-settings 100ms ;
+    transition: font-variation-settings 100ms;
 
     font-size: 5rem;
     margin-left: 3rem;
-    color: white;text-align: right;
+    color: white;
+    text-align: right;
     
-
-    font-variation-settings: "POSI" 100;
-        animation: posi-loop 1.2s ease-in-out infinite;
+    animation: posi-loop 1.2s ease-in-out infinite;
     // &:hover {
     //     color: grey;
     //     font-variation-settings: "POSI" 100;

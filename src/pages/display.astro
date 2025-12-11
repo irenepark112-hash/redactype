@@ -4,13 +4,22 @@ import '../styles/display.scss';
 ---
 
 <Layout>
-    <h1 id="title">redactype</h1>
+    <div id="header-bar">
+        <div id="header-left">
+            <p id="description">+Redactype focuses on typefaces that hide and reveal information.</p>
+            <p id="credit">Type+Code 2025</p>
+        </div>
+        <div id="header-right">
+            <h1 id="title">redactype</h1>
+            <h1 id="download">download!</h1>
+        </div>
+    </div>
 
     <div id="page-content">
 
     <div class="category" id="first">
-        <p class="title">Advent</p>
-            <div class="advent-type">
+        <p class="title" onclick="toggleFullscreen('first')">Advent</p>
+            <div class="advent-type" onclick="toggleFullscreen('first')">
                 <span>VIVID zigzags FLOURISH between THE GRID grid.</span>
                 <span>VIVID zigzags FLOURISH between THE GRID grid.</span>
 		    </div>
@@ -20,14 +29,25 @@ import '../styles/display.scss';
                 <span id="current-posi"></span>
 
                 <h3>SIZE</h3>
-                <input type="range" id="size-slider" min="10" max="30" value="0" step="1" oninput="setSize(this.value)">
-                <span id="current-size"></span>
+                <input type="range" id="size-slider-first" min="5" max="20" value="10" step="1" oninput="setSizeFirst(this.value)">
+                <span id="current-size-first"></span>
+            </div>
+            <div class="divider-line"></div>
+            <div class="alphabet-container">
+                <div class="alphabet uppercase">
+                    <span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>G</span><span>H</span><span>I</span><span>J</span><span>K</span><span>L</span><span>M</span><span>N</span><span>O</span><span>P</span><span>Q</span><span>R</span><span>S</span><span>T</span><span>U</span><span>V</span><span>W</span><span>X</span><span>Y</span><span>Z</span>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="hover-letter">A</div>
+                <div class="alphabet lowercase">
+                    <span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span><span>i</span><span>j</span><span>k</span><span>l</span><span>m</span><span>n</span><span>o</span><span>p</span><span>q</span><span>r</span><span>s</span><span>t</span><span>u</span><span>v</span><span>w</span><span>x</span><span>y</span><span>z</span>
+                </div>
             </div>
     </div>
 
     <div class="category" id="second">
-        <p class="title">Gravity</p>
-            <div class="gravity-type">
+        <p class="title" onclick="toggleFullscreen('second')">Gravity</p>
+            <div class="gravity-type" onclick="toggleFullscreen('second')">
                 <span>Gravity guides gentle gestures gracefully.</span>
                 <span>Gravity guides gentle gestures gracefully.</span>
             </div>
@@ -35,12 +55,27 @@ import '../styles/display.scss';
                 <h3>GRAV</h3>
                 <input type="range" id="grav-slider" min="0" max="100" value="0" step="1" oninput="setGrav(this.value)">
                 <span id="current-grav"></span>
+
+                <h3>SIZE</h3>
+                <input type="range" id="size-slider-second" min="5" max="20" value="10" step="1" oninput="setSizeSecond(this.value)">
+                <span id="current-size-second"></span>
+            </div>
+            <div class="divider-line"></div>
+            <div class="alphabet-container">
+                <div class="alphabet uppercase">
+                    <span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>G</span><span>H</span><span>I</span><span>J</span><span>K</span><span>L</span><span>M</span><span>N</span><span>O</span><span>P</span><span>Q</span><span>R</span><span>S</span><span>T</span><span>U</span><span>V</span><span>W</span><span>X</span><span>Y</span><span>Z</span>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="hover-letter">A</div>
+                <div class="alphabet lowercase">
+                    <span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span><span>i</span><span>j</span><span>k</span><span>l</span><span>m</span><span>n</span><span>o</span><span>p</span><span>q</span><span>r</span><span>s</span><span>t</span><span>u</span><span>v</span><span>w</span><span>x</span><span>y</span><span>z</span>
+                </div>
             </div>
 	</div>
 
     <div class="category" id="third">
-        <p class="title">Holepunch</p>
-            <div class="punch-type">
+        <p class="title" onclick="toggleFullscreen('third')">Holepunch</p>
+            <div class="punch-type" onclick="toggleFullscreen('third')">
                 <span>soft silk slips slowly through silent air.</span>
                 <span>soft silk slips slowly through silent air.</span>
             </div>
@@ -48,6 +83,42 @@ import '../styles/display.scss';
                 <h3>HOLE</h3>
                 <input type="range" id="hole-slider" min="0" max="100" value="0" step="1" oninput="setHole(this.value)">
                 <span id="current-hole"></span>
+
+                <h3>SIZE</h3>
+                <input type="range" id="size-slider-third" min="5" max="20" value="10" step="1" oninput="setSizeThird(this.value)">
+                <span id="current-size-third"></span>
+            </div>
+            <div class="divider-line"></div>
+            <div class="alphabet-container">
+                <div class="alphabet uppercase">
+                    <span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>G</span><span>H</span><span>I</span><span>J</span><span>K</span><span>L</span><span>M</span><span>N</span><span>O</span><span>P</span><span>Q</span><span>R</span><span>S</span><span>T</span><span>U</span><span>V</span><span>W</span><span>X</span><span>Y</span><span>Z</span>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="hover-letter">A</div>
+                <div class="alphabet lowercase">
+                    <span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span><span>i</span><span>j</span><span>k</span><span>l</span><span>m</span><span>n</span><span>o</span><span>p</span><span>q</span><span>r</span><span>s</span><span>t</span><span>u</span><span>v</span><span>w</span><span>x</span><span>y</span><span>z</span>
+                </div>
+            </div>
+    </div>
+
+    <div class="category" id="fourth">
+        <p class="title" onclick="toggleFullscreen('fourth')">Babie</p>
+            <div class="babie-type" onclick="toggleFullscreen('fourth')">
+                <span>BABIE BRINGS BOLD BEAUTIFUL BRILLIANCE.</span>
+                <span>BABIE BRINGS BOLD BEAUTIFUL BRILLIANCE.</span>
+            </div>
+            <div class="controls">
+            </div>
+            <div class="divider-line"></div>
+            <div class="alphabet-container">
+                <div class="alphabet uppercase">
+                    <span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>G</span><span>H</span><span>I</span><span>J</span><span>K</span><span>L</span><span>M</span><span>N</span><span>O</span><span>P</span><span>Q</span><span>R</span><span>S</span><span>T</span><span>U</span><span>V</span><span>W</span><span>X</span><span>Y</span><span>Z</span>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="hover-letter">A</div>
+                <div class="alphabet lowercase">
+                    <span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span><span>i</span><span>j</span><span>k</span><span>l</span><span>m</span><span>n</span><span>o</span><span>p</span><span>q</span><span>r</span><span>s</span><span>t</span><span>u</span><span>v</span><span>w</span><span>x</span><span>y</span><span>z</span>
+                </div>
             </div>
     </div>
     
@@ -63,10 +134,22 @@ import '../styles/display.scss';
             root.style.setProperty('--POSI', newPosi);
         }
 
-        var currentSize = document.querySelector('#current-size');
-        function setSize(newSize) {
-            currentSize.innerText = newSize;
-            root.style.setProperty('--SIZE', newSize + "rem");
+        var currentSizeFirst = document.querySelector('#current-size-first');
+        function setSizeFirst(newSize) {
+            currentSizeFirst.innerText = newSize;
+            root.style.setProperty('--SIZE-FIRST', newSize + "rem");
+        }
+
+        var currentSizeSecond = document.querySelector('#current-size-second');
+        function setSizeSecond(newSize) {
+            currentSizeSecond.innerText = newSize;
+            root.style.setProperty('--SIZE-SECOND', newSize + "rem");
+        }
+
+        var currentSizeThird = document.querySelector('#current-size-third');
+        function setSizeThird(newSize) {
+            currentSizeThird.innerText = newSize;
+            root.style.setProperty('--SIZE-THIRD', newSize + "rem");
         }
 
         var currentGrav = document.querySelector('#current-grav');
@@ -80,6 +163,158 @@ import '../styles/display.scss';
             currentHole.innerText = newHole;
             root.style.setProperty('--HOLE', newHole);
         }
+
+
+        var activeFullscreen = null;
+        var variationAnimation = null;
+        var variationValue = 0;
+        var variationDirection = 1;
+        var gravityTime = 0;
+
+        function startVariationAnimation(categoryId) {
+            if (categoryId === 'fourth') return;
+            
+            variationValue = 0;
+            variationDirection = 1;
+            gravityTime = 0;
+            
+            if (categoryId === 'second') {
+                variationAnimation = setInterval(function() {
+                    gravityTime += 0.05;
+                    var sineVal = (Math.sin(gravityTime) + 1) / 2;
+                    var easedValue = Math.pow(sineVal, 2) * 100;
+                    root.style.setProperty('--GRAV', easedValue);
+                }, 20);
+            } else if (categoryId === 'first') {
+                variationAnimation = setInterval(function() {
+                    variationValue += variationDirection * 3;
+                    if (variationValue >= 100) {
+                        variationValue = 100;
+                        variationDirection = -1;
+                    } else if (variationValue <= 0) {
+                        variationValue = 0;
+                        variationDirection = 1;
+                    }
+                    root.style.setProperty('--POSI', variationValue);
+                }, 30);
+            } else if (categoryId === 'third') {
+                var holeTime = 0;
+                variationAnimation = setInterval(function() {
+                    holeTime += 0.05;
+                    var sineVal = (Math.sin(holeTime) + 1) / 2;
+                    var easedValue = Math.pow(sineVal, 2) * 100;
+                    root.style.setProperty('--HOLE', easedValue);
+                }, 20);
+            }
+        }
+
+        function stopVariationAnimation() {
+            if (variationAnimation) {
+                clearInterval(variationAnimation);
+                variationAnimation = null;
+            }
+        }
+
+        function toggleFullscreen(categoryId) {
+            var category = document.getElementById(categoryId);
+            var headerBar = document.getElementById('header-bar');
+            var pageContent = document.getElementById('page-content');
+            if (!category) return;
+
+            if (activeFullscreen === categoryId) {
+                stopVariationAnimation();
+                category.classList.remove('fullscreen');
+                activeFullscreen = null;
+                document.body.style.overflow = '';
+                if (headerBar) headerBar.style.display = '';
+                if (pageContent) {
+                    Array.from(pageContent.children).forEach(function(child) {
+                        if (child.id !== categoryId) {
+                            child.style.display = '';
+                        }
+                    });
+                }
+            } else {
+                if (activeFullscreen) {
+                    stopVariationAnimation();
+                    var prevCategory = document.getElementById(activeFullscreen);
+                    if (prevCategory) prevCategory.classList.remove('fullscreen');
+                }
+                category.classList.add('fullscreen');
+                activeFullscreen = categoryId;
+                startVariationAnimation(categoryId);
+                document.body.style.overflow = 'hidden';
+                if (headerBar) headerBar.style.display = 'none';
+                if (pageContent) {
+                    Array.from(pageContent.children).forEach(function(child) {
+                        if (child.id !== categoryId) {
+                            child.style.display = 'none';
+                        }
+                    });
+                }
+            }
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && activeFullscreen) {
+                stopVariationAnimation();
+                var category = document.getElementById(activeFullscreen);
+                var headerBar = document.getElementById('header-bar');
+                var pageContent = document.getElementById('page-content');
+                if (category) category.classList.remove('fullscreen');
+                activeFullscreen = null;
+                document.body.style.overflow = '';
+                if (headerBar) headerBar.style.display = '';
+                if (pageContent) {
+                    Array.from(pageContent.children).forEach(function(child) {
+                        child.style.display = '';
+                    });
+                }
+            }
+        });
+
+        function downloadFonts() {
+            var fonts = [
+                '/fonts/ADVENT.ttf',
+                '/fonts/GRAVITY2.ttf',
+                '/fonts/PUNCH.ttf',
+                '/fonts/Babie.ttf'
+            ];
+            fonts.forEach(function(font, index) {
+                setTimeout(function() {
+                    var link = document.createElement('a');
+                    link.href = font;
+                    link.download = font.split('/').pop();
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }, index * 300);
+            });
+        }
+
+        document.getElementById('download').addEventListener('click', downloadFonts);
+
+        document.addEventListener('mouseover', function(e) {
+            if (activeFullscreen && e.target.matches('.fullscreen .alphabet span')) {
+                var hoverLetter = document.querySelector('#' + activeFullscreen + '.fullscreen .hover-letter');
+                if (hoverLetter) {
+                    hoverLetter.textContent = e.target.textContent;
+                    hoverLetter.style.display = 'block';
+                }
+            }
+        });
+        
+        document.addEventListener('mouseout', function(e) {
+            if (activeFullscreen && e.target.matches('.fullscreen .alphabet span')) {
+                var alphabetContainer = document.querySelector('#' + activeFullscreen + '.fullscreen .alphabet-container');
+                if (alphabetContainer && !alphabetContainer.contains(e.relatedTarget)) {
+                    var hoverLetter = document.querySelector('#' + activeFullscreen + '.fullscreen .hover-letter');
+                    if (hoverLetter) {
+                        hoverLetter.style.display = 'none';
+                    }
+                }
+            }
+        });
 
         </script>
     
