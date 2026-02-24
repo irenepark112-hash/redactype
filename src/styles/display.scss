@@ -167,7 +167,7 @@ body {
 
         span {
             animation: all-marquee 30s linear infinite;
-            color: blue;
+            color: rgb(255, 255, 255);
             font-family: "Advent", sans-serif;
 			font-variation-settings: "POSI" var(--POSI);
 			font-size: var(--SIZE-FIRST);
@@ -259,7 +259,7 @@ body {
         font-size: 10rem;
         transition: transform .1s ease;
 
-        padding: 3rem;
+        padding: .1rem 3rem 3rem 3rem;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -333,7 +333,7 @@ body {
         width: 100vw;
         height: 100vh;
         z-index: 1000;
-        background-color: rgb(255, 208, 0);
+        background-color: rgb(255, 255, 255);
         color: rgb(0, 0, 0);
         overflow: auto;
         overflow-x: hidden;
