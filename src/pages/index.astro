@@ -1,3 +1,4 @@
 ---
-return Astro.redirect('/display', 302);
+const base = import.meta.env.BASE_URL;
+return Astro.redirect(`${base}display`, 302);
 ---

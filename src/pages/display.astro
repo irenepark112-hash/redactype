@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import '../styles/display.scss';
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout>
@@ -125,7 +126,7 @@ import '../styles/display.scss';
 
     </div>
     
-    <script is:inline>
+    <script is:inline define:vars={{ base }}>
         var root = document.querySelector('html');
         
         var currentPosi = document.querySelector('#current-posi');
@@ -275,10 +276,10 @@ import '../styles/display.scss';
 
         function downloadFonts() {
             var fonts = [
-                '/fonts/ADVENT.ttf',
-                '/fonts/GRAVITY2.ttf',
-                '/fonts/PUNCH.ttf',
-                '/fonts/Babie.ttf'
+                base + 'fonts/ADVENT.ttf',
+                base + 'fonts/GRAVITY2.ttf',
+                base + 'fonts/PUNCH.ttf',
+                base + 'fonts/Babie.ttf'
             ];
             fonts.forEach(function(font, index) {
                 setTimeout(function() {
